@@ -1,5 +1,4 @@
-
-task clk_monitor::monitor_frequency(input time monitor_period, input int expected_freq);
+task monitor_frequency(input time monitor_period, input int expected_freq);
 	time start_time = $time;
 	time positive_edges[$];
 	`uvm_info("Monitor Frequency", $sformatf("\n*********************************************************************"), UVM_MEDIUM)

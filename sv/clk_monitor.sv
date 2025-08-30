@@ -1,3 +1,11 @@
+//////////////////////////////////////////////////////
+// Copyright (c) 2025 Neil Valin. All Rights Reserved.
+//
+//
+//////////////////////////////////////////////////////
+`ifndef __clk_monitor_sv__
+`define __clk_monitor_sv__
+
 class clk_monitor extends uvm_monitor;
 	
 	
@@ -7,6 +15,7 @@ class clk_monitor extends uvm_monitor;
 		super.new(name, parent);
 	endfunction
 
-	extern virtual task clk_monitor::monitor_frequency(input int monitor_period, input int expected_freq);
+	`include ".cclk_monitor_tasks.sv"
 	
 endclass
+`endif

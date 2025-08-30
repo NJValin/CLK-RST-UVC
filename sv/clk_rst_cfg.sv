@@ -1,3 +1,10 @@
+//////////////////////////////////////////////////////
+// Copyright (c) 2025 Neil Valin. All Rights Reserved.
+//
+//
+//////////////////////////////////////////////////////
+`ifndef __clk_rst_cfg_sv__
+`define __clk_rst_cfg_sv__
 class clk_rst_cfg extends uvm_object;
 	
 	uvm_active_passive_enum is_active;
@@ -21,7 +28,7 @@ class clk_rst_cfg extends uvm_object;
 	bit              rst_enable          = 1;    // Enables the rst to toggle
 	time             rst_cycle_duration  = 10;   // Num of cycle long the reset signal is held low/high for
 	time             rst_delay           = 0;    // Time after 0s the rst triggers
-	bit              rst_polarity        = 1;    // Active high (1) or low (0)
+	bit              rst_polarity        = 0;    // Active high (1) or low (0)
 	
 	// enable all field operations: copy, compare, print, record, and pack
 	`uvm_object_utils_begin(clk_rst_cfg)
@@ -67,3 +74,4 @@ class clk_rst_cfg extends uvm_object;
 	
 	assert 
 endclass
+`endif
